@@ -3,8 +3,6 @@ async function getAll()
 {
     const projects = await db('projects')
         .select('project_id', 'project_name', 'project_description', 'project_completed')
-        .orderBy('project_name');
-
     return projects;
 }
 
