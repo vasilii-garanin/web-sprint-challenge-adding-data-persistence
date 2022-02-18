@@ -1,6 +1,6 @@
 const Project = require('./model');
 
-async function checkProjectNameUnique(req, res, next)
+async function checkProjectName(req, res, next)
 {
     try
     {
@@ -27,5 +27,5 @@ async function checkProjectNameUnique(req, res, next)
 
 module.exports =
 {
-    checkProjectNameUnique
+    checkProjectName
 };
