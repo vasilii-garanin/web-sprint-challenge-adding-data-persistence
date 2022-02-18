@@ -7,8 +7,7 @@ exports.up = function (knex)
             tbl.text('project_name')
                 .notNullable();
             tbl.text('project_description');
-            tbl.boolean('project_completed')
-                .defaultTo(true);
+            tbl.boolean('project_completed');
         })
         .createTable('resources', tbl =>
         {

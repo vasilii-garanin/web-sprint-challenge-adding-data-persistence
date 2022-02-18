@@ -1,6 +1,6 @@
 const express = require('express');
 const Project = require('./model');
-
+const { checkProjectNameUnique } = require('./middleware');
 const router = express.Router();
 
 
@@ -26,7 +26,7 @@ router.get('/', (req, res, next) =>
         .catch(next);
 });
 
-router.post('/', (req, res, next) =>
+router.post('/', checkProjectNameUnique, (req, res, next) =>
 {
     const project = req.body;
 
